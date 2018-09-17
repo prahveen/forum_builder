@@ -1,7 +1,7 @@
 <p>Forum Index Page</p>
 
 <% @forums.each do | forum | %>
-  <h2><%= forum.title %></h2>
+  <h2><%= link_to forum.title, forum_path(forum) %></h2>
 <% end %>
 
 
