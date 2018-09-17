@@ -1,0 +1,7 @@
+<%= simple_form_for @forum do |f| %>
+  <div class="form-group">
+    <%= f.input :title, label: "Post Title", class: "form-control" %>
+    <%= f.input :description, label: "Post Content", class: "form-control"%>
+    <%= f.button :submit, class: "btn btn-primary"%>
+  </div>
+<% end %>
