@@ -20,3 +20,8 @@
   `eg : gem 'simple_form', '~> 4.0', '>= 4.0.1'`
 
 # Include gems in ./Gemfile
+  ## Gem for form
+    $ gem 'simple_form', '~> 4.0', '>= 4.0.1'
+    $ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+  ## update dependencies
+    $ bundle install
