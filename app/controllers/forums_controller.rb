@@ -10,7 +10,7 @@ class ForumsController < ApplicationController
 
   #Create new instance of Forum
   def new
-    @forum = current_user.forums
+    @forum = current_user.forums.build
   end
 
   def create
