@@ -28,3 +28,6 @@
 
 # Generate simple_form
   $ rails generate simple_form:install --bootstrap
+
+# Generate devise gem
+  $ rails generate devise:install
