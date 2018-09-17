@@ -7,8 +7,13 @@ class ForumsController < ApplicationController
     @forum = Forum.new
   end
 
-  def created
+  def create
     @forum = Forum.new(forum_params)
+    if forum.save
+      redirect_to root_path
+    else
+      render 'new'
+    end
   end
 
   private
