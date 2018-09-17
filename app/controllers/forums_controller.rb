@@ -1,5 +1,6 @@
 class ForumsController < ApplicationController
   def index
+    @forums = Forum.all.order("created_at DESC")
   end
 
   #Create new instance of Forum
@@ -9,7 +10,7 @@ class ForumsController < ApplicationController
 
   def create
     @forum = Forum.new(forum_params)
-    if forum.save
+    if @forum.save
       redirect_to root_path
     else
       render 'new'
