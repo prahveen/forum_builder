@@ -8,3 +8,6 @@
 
 # Generate Forums controller
   $ rails generate controller Forums
+
+# Start rails server
+  $ rails server
