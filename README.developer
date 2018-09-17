@@ -11,3 +11,7 @@
 
 # Start rails server
   $ rails server
+
+# Add root path : include in config/routes.rb
+  resources :forums
+  root 'forums#index'
