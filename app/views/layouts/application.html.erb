@@ -9,8 +9,28 @@
   </head>
 
   <body>
+      <nav class="navbar navbar-inverse">
+        <div class="container">
+          <div class="navbar-header">
+            <%= link_to "ForumBuilder", root_path, class: "navbar-brand" %>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "SignUp",  new_user_registration_path %></li>
+            <% if user_signed_in? %>
+              <%= link_to "SignOut", destroy_user_session_path, method: :delete %>
+            <% else %>
+              <li> <%= link_to "LogIn", new_user_session_path %> </li>
+            <% end %>
+            <li><%= link_to "New Post", new_forum_path%></li>
+          </ul>
+        </div>
+      </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
+
   </body>
 </html>
