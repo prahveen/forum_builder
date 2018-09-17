@@ -1,2 +1,5 @@
 <h2> <%= @forum.title %> </h2>
 <p> <%= @forum.description %> </p>
+
+<%= link_to "Back", root_path %>
+<%= link_to "Edit", edit_forum_path(@forum) %>

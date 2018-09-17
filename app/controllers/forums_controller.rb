@@ -22,6 +22,17 @@ class ForumsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @forum.update(forum_params)
+      redirect_to forum_path
+    else
+      render 'edit'
+    end
+  end
+
   private
     def forum_params
       @forum = params.require(:forum).permit(:title, :description)
