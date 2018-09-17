@@ -10,11 +10,11 @@ class ForumsController < ApplicationController
 
   #Create new instance of Forum
   def new
-    @forum = Forum.new
+    @forum = current_user.forums
   end
 
   def create
-    @forum = Forum.new(forum_params)
+    @forum = current_user.forums.build(forum_params)
     if @forum.save
       redirect_to root_path
     else
