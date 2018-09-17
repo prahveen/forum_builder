@@ -24,6 +24,14 @@ class CommentsController < ApplicationController
     end
   end
 
+  def destroy
+    if @comment.destroy
+      redirect_to forum_path(@forum)
+    else
+      render redirect_to forum_path(@forum)
+    end
+  end
+
   private
     def comment_params
       params.require(:comment).permit(:content)
