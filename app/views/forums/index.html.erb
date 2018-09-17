@@ -1,8 +1,12 @@
-<p>Forum Index Page</p>
-
+<div class="row">
 <% @forums.each do | forum | %>
-  <h2><%= link_to forum.title, forum_path(forum) %></h2>
+  <div class="col-lg-4">
+    <div class="thumbnail">
+      <center>
+        <h2><%= forum.title %></h2>
+        <%= link_to "View More", forum_path(forum), class: "btn btn-primary" %>
+      </center>
+    </div>
+  </div>
 <% end %>
-
-
-<%= link_to "New Post", new_forum_path, class: "btn btn-default" %>
+</div>
