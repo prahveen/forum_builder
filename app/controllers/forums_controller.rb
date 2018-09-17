@@ -1,6 +1,6 @@
 class ForumsController < ApplicationController
   before_action :find_forum, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   def index
     @forums = Forum.all.order("created_at DESC")
   end
