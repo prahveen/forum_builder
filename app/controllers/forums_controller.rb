@@ -1,4 +1,7 @@
 class ForumsController < ApplicationController
+  before_action :find_forum, only: [:show, :edit, :update, :destroy]
+
+
   def index
     @forums = Forum.all.order("created_at DESC")
   end
@@ -24,5 +27,9 @@ class ForumsController < ApplicationController
   private
     def forum_params
       @forum = params.require(:forum).permit(:title, :description)
+    end
+
+    def find_forum
+      @forum = Forum.find([params[:id]])
     end
 end
