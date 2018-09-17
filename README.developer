@@ -1,2 +1,5 @@
 # Create new application
   $ rails new ForumBuilder
+
+# Generate Forum model
+  $ rails generate model Forum title:string description:text
