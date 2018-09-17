@@ -31,3 +31,7 @@
 
 # Generate devise gem
   $ rails generate devise:install
+
+# Create User model
+  $ rails generate devise User
+  $ rake db:migrate
