@@ -1,18 +1,22 @@
 <div class="container">
-  <div class="row">
+  <div class="well">
+    <div class="row">
     <div class="col align-self-center">
-      <h2> <%= @forum.title %> </h2>
-      <p> Posted By: <%= @forum.user.email %> <%= time_ago_in_words(@forum.created_at)%> ago </p>
+      <div class="panel">
+      <h2 style="color:#311B92; font-family: Arial, Helvetica, sans-serif; text-transform:capitalize"> <%= @forum.title %> </h2>
+      <span class="label label-default">
+        Posted By: <%= @forum.user.email %> <%= time_ago_in_words(@forum.created_at)%> ago
+      </span>
       <p> <%= @forum.description %> </p>
-
-      <h1>Comments:</h1>
+    </div>
+      <h4>Comments:</h4>
       <%= render @forum.comments %>
 
-      <h1>Reply</h1>
       <%= render 'comments/form' %>
       <%= link_to "Back", root_path %>
       <%= link_to "Edit", edit_forum_path(@forum) %>
       <%= link_to "Delete", forum_path(@forum), method: :delete %>
     </div>
   </div>
+  <div>
 </div>
