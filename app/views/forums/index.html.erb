@@ -1,11 +1,9 @@
 <div class="row">
 <% @forums.each do | forum | %>
   <div class="col-lg-4">
-    <div class="thumbnail">
-      <center>
-        <h2><%= forum.title %></h2>
-        <%= link_to "View More", forum_path(forum), class: "btn btn-primary" %>
-      </center>
+    <div class="panel panel-primary">
+        <div class="panel-heading"><%= forum.title %></div>
+        <%= link_to "View More", forum_path(forum), class: "btn" %>
     </div>
   </div>
 <% end %>
