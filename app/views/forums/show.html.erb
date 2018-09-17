@@ -4,6 +4,11 @@
       <h2> <%= @forum.title %> </h2>
       <p> <%= @forum.description %> </p>
 
+      <h1>Comments:</h1>
+      <%= render @forum.comments %>
+
+      <h1>Reply</h1>
+      <%= render 'comments/form' %>
       <%= link_to "Back", root_path %>
       <%= link_to "Edit", edit_forum_path(@forum) %>
       <%= link_to "Delete", forum_path(@forum), method: :delete %>
