@@ -5,3 +5,6 @@
   $ rails generate model Forum title:string description:text
   ## update changes made to model with Forum model
     $ rake db:migrate
+
+# Generate Forums controller
+  $ rails generate controller Forums
