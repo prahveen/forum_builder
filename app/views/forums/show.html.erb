@@ -1,5 +1,12 @@
-<h2> <%= @forum.title %> </h2>
-<p> <%= @forum.description %> </p>
+<div class="container">
+  <div class="row">
+    <div class="col align-self-center">
+      <h2> <%= @forum.title %> </h2>
+      <p> <%= @forum.description %> </p>
 
-<%= link_to "Back", root_path %>
-<%= link_to "Edit", edit_forum_path(@forum) %>
+      <%= link_to "Back", root_path %>
+      <%= link_to "Edit", edit_forum_path(@forum) %>
+      <%= link_to "Delete", forum_path(@forum), method: :delete %>
+    </div>
+  </div>
+</div>
