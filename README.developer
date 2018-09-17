@@ -15,3 +15,8 @@
 # Add root path : include in config/routes.rb
   resources :forums
   root 'forums#index'
+
+# Get the gems from https://rubygems.org and include gems in Gemfile
+  `eg : gem 'simple_form', '~> 4.0', '>= 4.0.1'`
+
+# Include gems in ./Gemfile
