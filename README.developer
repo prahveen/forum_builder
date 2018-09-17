@@ -35,3 +35,6 @@
 # Create User model
   $ rails generate devise User
   $ rake db:migrate
+
+# Migrate user and forum tables
+  $ rails generate migration add_user_id_to_forums
