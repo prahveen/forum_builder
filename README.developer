@@ -37,4 +37,4 @@
   $ rake db:migrate
 
 # Migrate user and forum tables
-  $ rails generate migration add_user_id_to_forums
+  $ rails generate migration add_user_id_to_forums user_id:integer
