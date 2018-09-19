@@ -1,4 +1,4 @@
-# ForumBuilder
+# ForumService
 
 Simple forum application.
 
